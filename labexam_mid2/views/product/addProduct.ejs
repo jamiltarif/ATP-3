@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Product Page</title>
+</head>
+<body>
+	
+	<center>
+		<h1>Add Product</h1>
+		<form method="post">
+			<table>
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" name="name" ></td>
+				</tr>
+				<tr>
+					<td>Quantity:</td>
+					<td><input type="text" name="quantity" ></td>
+				</tr>
+				<tr>
+					<td>Price:</td>
+					<td><input type="text" name="price" ></td>
+				</tr>
+				<tr>
+					<td>Review:</td>
+					<td><textarea cols="22" rows="4" name="review"></textarea></td>
+				</tr>
+				<tr>
+					<td>Subcategory:</td>
+					<td>
+						<select name="subcategory">
+							<% for(var i=0; i < item.length; i++){ %>
+						  <option value="<%=item[i].subcat_id%>"><%=item[i].subcat_name%></option>
+						  <% } %>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="/home/emp">Back</a></td>
+					<td colspan="2"><input type="submit" name="submit" value="Submit" ></td>
+				</tr>
+			</table>
+	</form>
+	</center>
+</body>
+</html>
